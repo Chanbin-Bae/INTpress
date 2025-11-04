@@ -17,7 +17,7 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
   </tr>
   <tr>
     <td align="center">RBU of queue</td>
-    <td align="center">RMSE of hop queue</td>
+    <td align="center">RMSE of queue</td>
   </tr>
 </table>
 
@@ -30,7 +30,7 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
   </tr>
   <tr>
     <td align="center">RBU of queue</td>
-    <td align="center">RMSE of hop queue</td>
+    <td align="center">RMSE of queue</td>
   </tr>
 </table>
 
@@ -43,7 +43,7 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
   </tr>
   <tr>
     <td align="center">RBU of queue</td>
-    <td align="center">RMSE of hop queue</td>
+    <td align="center">RMSE of queue</td>
   </tr>
 </table>
 
@@ -62,6 +62,6 @@ Traffic was generated with DPDK and sent by host1 towards host2, with each switc
   </tr>
   <tr>
     <td align="center">RBU of queue</td>
-    <td align="center">RMSE of hop queue</td>
+    <td align="center">RMSE of queue</td>
   </tr>
 </table>
