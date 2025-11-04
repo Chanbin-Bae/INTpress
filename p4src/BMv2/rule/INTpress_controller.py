@@ -67,54 +67,66 @@ class Controller(object):
             if count[i] == 0:
                 self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+						[str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
             elif section_size[i] == 1:
                 self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
             elif section_size[i] == 2:
                 self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
             else:
                 self.controller_sw1.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw2.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
                 self.controller_sw3.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i]), [str(code[i])]),
+                                              [str(value[i]],
+                                              [str(code_length[i]), [str(code[i])]]
                                               )
     
 
