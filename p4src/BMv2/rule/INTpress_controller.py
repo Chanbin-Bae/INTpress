@@ -3,7 +3,7 @@ import pandas as pd
 
 def read_rules():
     global code_length, code, count, value, section_size
-    df = pd.read_csv('~/INTpress/p4src/Tofino/rule/CompressionRules.csv')
+    df = pd.read_csv('~/INTpress/p4src/BMv2/rule/CompressionRules.csv')
     code_length = df['code_length'].tolist() if 'code_length' in df.columns else []
     code = df['code'].tolist() if 'code' in df.columns else []
     count = df['count'].tolist() if 'count' in df.columns else []
@@ -65,68 +65,56 @@ class Controller(object):
         # 1 / 2
         for i in range(len(code_length)):
             if count[i] == 0:
-                self.controller.sw1.table_add("tb_encoding_queue1",
+                self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw2.table_add("tb_encoding_queue1",
+                self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw3.table_add("tb_encoding_queue1",
+                self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
             elif section_size[i] == 1:
-                self.controller.sw1.table_add("tb_encoding_queue1",
+                self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw2.table_add("tb_encoding_queue1",
+                self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw3.table_add("tb_encoding_queue1",
+                self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
             elif section_size[i] == 2:
-                self.controller.sw1.table_add("tb_encoding_queue1",
+                self.controller_sw1.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw2.table_add("tb_encoding_queue1",
+                self.controller_sw2.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw3.table_add("tb_encoding_queue1",
+                self.controller_sw3.table_add("tb_encoding_queue1",
                                               "encoding_queue1",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
             else:
-                self.controller.sw1.table_add("tb_encoding_queue3",
+                self.controller_sw1.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw2.table_add("tb_encoding_queue3",
+                self.controller_sw2.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
-                self.controller.sw3.table_add("tb_encoding_queue3",
+                self.controller_sw3.table_add("tb_encoding_queue3",
                                               "encoding_queue3",
-                                              [str(code_length[i])],
-                                              [str(code[i])]
+                                              [str(code_length[i]), [str(code[i])]),
                                               )
     
 
@@ -135,67 +123,67 @@ class Controller(object):
         for delta in range(0,8):
             for level in range(1,11):
                 if delta == 0 and 1<= level <= 8:
-                    self.controller.sw1.table_add("tb_update_space_0",
+                    self.controller_sw1.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw2.table_add("tb_update_space_0",
+                    self.controller_sw2.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw3.table_add("tb_update_space_0",
+                    self.controller_sw3.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )
                 elif delta == 0 and 9 <= level <= 16:
-                    self.controller.sw1.table_add("tb_update_space_0",
+                    self.controller_sw1.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw2.table_add("tb_update_space_0",
+                    self.controller_sw2.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw3.table_add("tb_update_space_0",
+                    self.controller_sw3.table_add("tb_update_space",
                                                   "update_space_0",
                                                   [str(delta), str(level)],
                                                   )                    
                 elif (delta >= level) and (delta + level) <= 8:
-                    self.controller.sw1.table_add("tb_update_space_1",
+                    self.controller_sw1.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw2.table_add("tb_update_space_1",
+                    self.controller_sw2.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw3.table_add("tb_update_space_1",
+                    self.controller_sw3.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
                 elif (delta < level) and (delta + level) <= 16:
-                    self.controller.sw1.table_add("tb_update_space_1",
+                    self.controller_sw1.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw2.table_add("tb_update_space_1",
+                    self.controller_sw2.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw3.table_add("tb_update_space_1",
+                    self.controller_sw3.table_add("tb_update_space",
                                                   "update_space_1",
                                                   [str(delta), str(level)],
                                                   )
                 elif (delta < level) and (delta + level) <= 24:
-                    self.controller.sw1.table_add("tb_update_space_2",
+                    self.controller_sw1.table_add("tb_update_space",
                                                   "update_space_3",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw2.table_add("tb_update_space_2",
+                    self.controller_sw2.table_add("tb_update_space",
                                                   "update_space_2",
                                                   [str(delta), str(level)],
                                                   )
-                    self.controller.sw3.table_add("tb_update_space_2",
+                    self.controller_sw3.table_add("tb_update_space",
                                                   "update_space_2",
                                                   [str(delta), str(level)],
                                                   )
