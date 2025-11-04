@@ -21,7 +21,7 @@ class INTpress():
 
     @staticmethod
     def from_bytes(data):
-        hdr = FatIntHeader()
+        hdr = INTpressHeader()
         h = io.BytesIO(data)
         hdr.INTpressNum = int.from_bytes(h.read(1), byteorder='big')
         hdr.INTpressSpace = int.from_bytes(h.read(1), byteorder='big')
