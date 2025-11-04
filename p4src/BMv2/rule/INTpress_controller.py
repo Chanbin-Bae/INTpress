@@ -1,7 +1,9 @@
 from p4utils.utils.sswitch_thrift_API import *
+import pandas as pd
 
 def read_rules():
-    df = pd.read_csv('/home/mncgpu5/chanbin/INTpress/p4src/Tofino/rule/CompressionRules.csv')
+    global code_length, code, count, value, section_size
+    df = pd.read_csv('~/INTpress/p4src/Tofino/rule/CompressionRules.csv')
     code_length = df['code_length'].tolist() if 'code_length' in df.columns else []
     code = df['code'].tolist() if 'code' in df.columns else []
     count = df['count'].tolist() if 'count' in df.columns else []
