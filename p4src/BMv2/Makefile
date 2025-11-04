@@ -8,7 +8,7 @@ LOG_DIR 	= 	log
 all: run
 
 run: clean
-	sudo python3 $(FILE_PATH)/INTpress/p4src/BMv2/example/network.py --p4 $(FILE_PATH)/INTpress/p4src/BMv2/p4src/INTpress.p4 --file_path $(FILE_PATH)
+	sudo python3 $(FILE_PATH)/INTpress/p4src/BMv2/example/network.py --p4 $(FILE_PATH)/INTpress/p4src/BMv2/INTpress.p4 --file_path $(FILE_PATH)
 
 stop:
 	sudo mn -c
