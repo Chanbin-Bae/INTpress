@@ -33,7 +33,6 @@ class INTpress():
 def parse_INTpress_header(pkt):
     int_metadata = pkt[IP].load[:]
     meta = INTpress.from_bytes(int_metadata)
-    # print(meta)
     return meta
 
 def parse_metadata(pkt, INTpressSpace,INTpressNum):
@@ -50,6 +49,8 @@ def parsing_recv_packets(pkt):
             INTpressHdr = parse_INTpress_header(pkt)
             print(f"[INTpressNum, INTpressSpace] = [{INTpressHdr.INTpressNum}, {INTpressHdr.INTpressSpace}]")
             final_int_metadata = parse_metadata(pkt, INTpressHdr.INTpressSpace,INTpressHdr.INTpressNum)
+            print(pkt[IP].load[:])
+            print(final_int_metadata)
             
     except Exception as e:
         print(f"Error parsing packet: {e}")
@@ -66,7 +67,6 @@ def handle_pkt(pkt):
 
 def receive_packet():
     global iface
-    print("R!")
     sniff(iface = iface, prn = lambda x: handle_pkt(x))
 
 #################################################################################################
@@ -83,18 +83,14 @@ def main():
     recv_pkts = []
 
     args = get_args()
-    print(1)
 
     init_time = time.time()
-    print(2)
 
     file_name = f"{args.file_path}/INTpress/p4src/BMv2/example/packets/result.txt"
     sys.stdout = open(file_name,'w')
-    print(3)
 
     ifaces = [i for i in os.listdir('/sys/class/net/') if 'eth' in i]
     iface = ifaces[0]
-    print(iface)
 
     receive_thread = threading.Thread(target=receive_packet, args=())
     receive_thread.daemon = True
@@ -106,7 +102,6 @@ def main():
 
     for pkt in recv_pkts:
         parsing_recv_packets(pkt)
-        print("parse")
 
     sys.exit()
     
