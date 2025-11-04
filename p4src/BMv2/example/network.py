@@ -76,8 +76,8 @@ def main():
     print("Insert rules complete!")
     
     # Execute command on Mininet nodes simultaneously
-    command1 = f'python3 {args.file_path}/INTpress/BMv2/example/packets/send.py --file_path {args.file_path}'
-    command2 = f'python3 {args.file_path}/INTpress/BMv2/example/packets/receive.py --file_path {args.file_path}'
+    command1 = f'python3 {args.file_path}/INTpress/p4src/BMv2/example/packets/send.py --file_path {args.file_path}'
+    command2 = f'python3 {args.file_path}/INTpress/p4src/BMv2/example/packets/receive.py --file_path {args.file_path}'
     commands.append(command1)
     commands.append(command2)
 
