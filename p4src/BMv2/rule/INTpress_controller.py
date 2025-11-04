@@ -18,7 +18,7 @@ def read_rules():
     )
 
     code_length  = [int(x) for x in (df['code_length'].tolist() if 'code_length' in df.columns else [])]
-    code         = [int(x) for x in (df['code'].tolist() if 'code' in df.columns else [])]  # ← 정수 리스트
+    code         = [int(x) for x in (df['code'].tolist() if 'code' in df.columns else [])]
     count        = [int(x) for x in (df['count'].tolist() if 'count' in df.columns else [])]
     value        = [int(x) for x in (df['value'].tolist() if 'value' in df.columns else [])]
     section_size = [int(x) for x in (df['section_size'].tolist() if 'section_size' in df.columns else [])]
