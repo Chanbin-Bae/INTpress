@@ -18,7 +18,7 @@ def read_rules():
     )
 
     code_length  = [int(x) for x in (df['code_length'].tolist() if 'code_length' in df.columns else [])]
-    code         = [int(x) for x in (df['code'].tolist() if 'code' in df.columns else [])]
+    code         = [int(x) for x in (df['code'].tolist() if 'code' in df.columns else [])]  # ← 정수 리스트
     count        = [int(x) for x in (df['count'].tolist() if 'count' in df.columns else [])]
     value        = [int(x) for x in (df['value'].tolist() if 'value' in df.columns else [])]
     section_size = [int(x) for x in (df['section_size'].tolist() if 'section_size' in df.columns else [])]
@@ -177,15 +177,15 @@ class Controller(object):
                                                   )                    
                 elif (delta >= level) and (delta + level) <= 8:
                     self.controller_sw1.table_add("tb_update_space",
-                                                  "update_space_1",
+                                                  "set1",
                                                   [str(delta), str(level)],
                                                   )
                     self.controller_sw2.table_add("tb_update_space",
-                                                  "update_space_1",
+                                                  "set1",
                                                   [str(delta), str(level)],
                                                   )
                     self.controller_sw3.table_add("tb_update_space",
-                                                  "update_space_1",
+                                                  "set1",
                                                   [str(delta), str(level)],
                                                   )
                 elif (delta < level) and (delta + level) <= 16:
