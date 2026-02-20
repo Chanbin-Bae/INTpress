@@ -103,12 +103,12 @@ for delta in range(0,8):
                     f"encoding_level = {level})"
             exec(func1)
         elif delta == 0 and 9 <= level <= 16:
-            func1 = f"p4_egress.tb_update_space.add_with_update_space_0(" + \
+            func1 = f"p4_egress.tb_update_space.add_with_update_space_1(" + \
                     f"delta = {delta}," + \
                     f"encoding_level = {level})"
             exec(func1)
         elif delta == 0 and 17 <= level <= 24:
-            func1 = f"p4_egress.tb_update_space.add_with_update_space_0(" + \
+            func1 = f"p4_egress.tb_update_space.add_with_update_space_2(" + \
                     f"delta = {delta}," + \
                     f"encoding_level = {level})"
             exec(func1)
