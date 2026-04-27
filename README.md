@@ -8,42 +8,33 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
 # Performance Results
 
 ## BMv2 environments
-### Data center networks
+### Relative bandwidth usage (RBU)
 <p align="center">
 <table>
   <tr>
     <td align="center"><img src="graphs/RBU/result_ft_queue_RBU.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_ft_queue_RBU.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_ft_queue_RBU.png" width="210"/></td>
+  </tr>
+  <tr>
+    <td align="center">Data center networks</td>
+    <td align="center">Backbone networks</td>
+    <td align="center">Mobile core networks</td>
+  </tr>
+</table>
+
+### Root mean square error (RMSE)
+<p align="center">
+<table>
+  <tr>
+    <td align="center"><img src="graphs/RBU/result_ft_queue_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_ft_queue_RMSE.png" width="210"/></td>
     <td align="center"><img src="graphs/RMSE/result_ft_queue_RMSE.png" width="210"/></td>
   </tr>
   <tr>
-    <td align="center">RBU of queue</td>
-    <td align="center">RMSE of queue</td>
-  </tr>
-</table>
-
-### Backbone Network
-<p align="center">
-<table>
-  <tr>
-    <td align="center"><img src="graphs/RBU/result_i_queue_RBU.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_i_queue_RMSE.png" width="210"/></td>
-  </tr>
-  <tr>
-    <td align="center">RBU of queue</td>
-    <td align="center">RMSE of queue</td>
-  </tr>
-</table>
-
-### Mobile core networks
-<p align="center">
-<table>
-  <tr>
-    <td align="center"><img src="graphs/RBU/result_mcn_queue_RBU.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_mcn_queue_RMSE.png" width="210"/></td>
-  </tr>
-  <tr>
-    <td align="center">RBU of queue</td>
-    <td align="center">RMSE of queue</td>
+    <td align="center">Data center networks</td>
+    <td align="center">Backbone networks</td>
+    <td align="center">Mobile core networks</td>
   </tr>
 </table>
 
