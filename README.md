@@ -1,7 +1,7 @@
 # INTpress
 
 <p align="center">
-<img src="graphs/INTpress_system_model.pdf" alt="INTpress Overview" width="800">
+<img src="graphs/INTpress_system_model.png" alt="INTpress Overview" width="800">
   
 Although in-band network telemetry (INT) allows for real-time and fine-grained network monitoring through a programmable data plane, it also adds to bandwidth overhead due to embedding network details in the packet headers. To mitigate this overhead, a compression technique can be used; yet, applying such compression in the data plane poses another challenge, as it may surpass available hardware resources. To tackle this, we introduce a compression-based quantized INT (INTpress), designed to efficiently decrease overhead by encoding data into shorter bit lengths in a manner native to the data plane. We also develop a dynamic data partitioning algorithm that formulates compression rules to balance monitoring accuracy and bandwidth usage. We implemented the INTpress switch using Tofino programmable switches, facilitating serialization to adeptly manage variable-length compressed bit streams, thus significantly reducing bandwidth usage. Our comprehensive experiments demonstrate the efficacy of INTpress across diverse network settings, including data center networks, backbone networks, and mobile core networks. The evaluation results show that INTpress can reduce bandwidth overhead by up to 66.01% relative to existing INT solutions, while preserving a high level of accuracy.
 
