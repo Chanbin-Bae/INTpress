@@ -12,9 +12,9 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
 <p align="center">
 <table>
   <tr>
-    <td align="center"><img src="graphs/RBU/result_f_RBU.png" width="210"/></td>
-    <td align="center"><img src="graphs/RBU/result_i_RBU.png" width="210"/></td>
-    <td align="center"><img src="graphs/RBU/result_l_RBU.png" width="210"/></td>
+    <td align="center"><img src="graphs/RBU/result_f_RBU.png" width="330"/></td>
+    <td align="center"><img src="graphs/RBU/result_i_RBU.png" width="330"/></td>
+    <td align="center"><img src="graphs/RBU/result_l_RBU.png" width="330"/></td>
   </tr>
   <tr>
     <td align="center">Data center networks</td>
@@ -27,9 +27,9 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
 <p align="center">
 <table>
   <tr>
-    <td align="center"><img src="graphs/RMSE/result_f_RMSE.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_i_RMSE.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_l_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_f_RMSE.png" width="330"/></td>
+    <td align="center"><img src="graphs/RMSE/result_i_RMSE.png" width="330"/></td>
+    <td align="center"><img src="graphs/RMSE/result_l_RMSE.png" width="330"/></td>
   </tr>
   <tr>
     <td align="center">Data center networks</td>
@@ -48,8 +48,8 @@ Traffic was generated with DPDK and sent by host1 towards host2, with each switc
 <p align="center">
 <table>
   <tr>
-    <td align="center"><img src="graphs/RBU/result_t_RBU.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_t_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RBU/result_t_RBU.png" width="330"/></td>
+    <td align="center"><img src="graphs/RMSE/result_t_RMSE.png" width="330"/></td>
   </tr>
   <tr>
     <td align="center">RBU of queue</td>
