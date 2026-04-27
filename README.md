@@ -27,9 +27,9 @@ Although in-band network telemetry (INT) allows for real-time and fine-grained n
 <p align="center">
 <table>
   <tr>
-    <td align="center"><img src="graphs/RBU/result_f_queue_RMSE.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_i_queue_RMSE.png" width="210"/></td>
-    <td align="center"><img src="graphs/RMSE/result_l_queue_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RBU/result_f_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_i_RMSE.png" width="210"/></td>
+    <td align="center"><img src="graphs/RMSE/result_l_RMSE.png" width="210"/></td>
   </tr>
   <tr>
     <td align="center">Data center networks</td>
